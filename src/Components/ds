@@ -1,0 +1,32 @@
+import React from 'react'
+import { FaSearch } from "react-icons/fa";
+import { IoIosNotifications } from "react-icons/io";
+import { FaAngleDown } from "react-icons/fa6";
+import Logo from '../assests/netflix.png'
+import Logo2 from '../assests/gbb.png'
+
+const Navbar = () => {
+  return (
+    <div className='w-full h-24 bg-transparent navbar absolute'>
+  <div className='flex justify-between  '>
+    <div>
+      <img src={Logo} alt="" className=" h-32 relative bottom-4 left-12"  />
+    </div>
+    <div>
+      <ul className='flex gap-16 text-[16px] text-gray-400 items-center pr-5 p-4'>
+        <li className='text-white'>Home</li>
+        <li>Movies</li>
+        <li>Series</li>
+        <li className='flex items-center gap-1'>My list <FaAngleDown /></li>
+        <li><FaSearch size={21} className='text-white' /></li>
+        <li><IoIosNotifications size={23} className='text-white' /></li>
+        <li><img src={Logo2} alt="" className="h-12 text-white " /></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+  )
+}
+
+export default Navbar
